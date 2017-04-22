@@ -12,7 +12,7 @@
 		<style>
 			html,
 			body {
-				background-color: #efeff4;
+				background-color: #F8F8FF;
 			}
 			
 			.title {
@@ -20,6 +20,18 @@
 				color: #6d6d72;
 				font-size: 15px;
 			}
+			.mui-switch.mui-active{
+				background-color: #5cacee;
+				border-color: #5cacee;
+			}
+			.mui-switch:before{
+            
+            content: '关';
+        }
+        .mui-switch.mui-active:before{
+            
+            content: '开';
+        }
 		</style>
 	</head>
 
@@ -49,7 +61,7 @@
 		<ul id="privateMessage" class="mui-table-view" style="margin-top: 5.5%;">
 			<li class="mui-table-view-cell">
 				<a id="about" class="mui-navigate-right" style="position: relative;">
-					个人信息<img src="images/b.jpg" style="width: 10%;position: absolute;top: 4%;left: 80%;border-radius: 50%;"/>
+					个人信息<img src="images/b.jpeg" style="width: 10%;position: absolute;top: 4%;left: 80%;border-radius: 50%;"/>
 				</a>
 			</li>
 		</ul>

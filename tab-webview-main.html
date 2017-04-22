@@ -15,35 +15,47 @@
 				background-color: #efeff4;
 				position: absolute;
 			}
-			#scanQR{
-				width: 8%;
-				position: absolute;
-				top:18%;
-				left: 90%;
+			
+			#header{
+				background-color: #5cacee;
 			}
+			#title{
+				color: white;
+				font-family: "微软雅黑";
+				font-size: 1.1em;
+			}
+			.mui-icon>img{
+				height: 100%;
+				width: 100%;
+			}
+			#nav{
+				background-color: #fff;
+				
+			}
+			
 		</style>
 	</head>
 
 	<body>
-		<header class="mui-bar mui-bar-nav">
+		<header id="header" class="mui-bar mui-bar-nav">
 			<h1 id="title" class="mui-title">首页</h1>
-			<div><img id="scanQR" src="images/scanQR.png"></div>
+			
 		</header>
-		<nav class="mui-bar mui-bar-tab">
+		<nav id="nav" class="mui-bar mui-bar-tab">
 			<a id="defaultTab" class="mui-tab-item mui-active" href="tab-webview-subpage-about.html">
-				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-icon"><img src="images/navlock.png"></span>
 				<span class="mui-tab-label">首页</span>
 			</a>
 			<a class="mui-tab-item" href="tab-webview-subpage-chat.html">
-				<span class="mui-icon mui-icon-videocam"><span class="mui-badge">6</span></span>
+				<span class="mui-icon"><img src="images/navvideo.png"><!--<span class="mui-badge">6</span>--></span>
 				<span class="mui-tab-label">录像</span>
 			</a>
 			<a class="mui-tab-item" href="tab-webview-subpage-contact.html">
-				<span class="mui-icon mui-icon-contact"><span class="mui-badge">2</span></span></span>
+				<span class="mui-icon"><img src="images/navinfo.png"><!--<span class="mui-badge">2</span>--></span></span>
 				<span class="mui-tab-label">消息</span>
 			</a>
 			<a class="mui-tab-item" href="tab-webview-subpage-setting.html">
-				<span class="mui-icon mui-icon-gear"></span>
+				<span class="mui-icon"><img src="images/navset.png"></span>
 				<span class="mui-tab-label">设置</span>
 			</a>
 		</nav>
@@ -116,24 +128,7 @@
 				}
 			});
 			
-			//跳转到扫码页面
-			var scanQR = document.getElementById("scanQR");
-		
-		scanQR.addEventListener("tap", function() {
-			mui.openWindow({
-				url: "scanQR.html",
-				id: "scanQR.html",
-				style: {
-					width: "100%",
-					height: "100%"
-				},
-				show: {
-					aniShow: "zoom-fade-out",
-					event: "loaded",
-					acceleration: "auto"
-				}
-			});
-		});
+			
 		</script>
 
 </html>

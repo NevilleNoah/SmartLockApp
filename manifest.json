@@ -243,7 +243,8 @@
 					"images/tel.png",
 					"images/video.png",
 					"images/unlocked.jpg",
-					"images/right.png"
+					"images/right.png",
+					"images/scanQR.png"
 				],
 				"refer": [
 					"scanQR.html",
@@ -257,13 +258,18 @@
 					"fonts/mui.ttf",
 					"css/mui.min.css",
 					"js/mui.min.js",
-					"images/scanQR.png"
+					"images/scanQR.png",
+					"js/jquery.js",
+					"scanQR.html",
+					"images/navset.png",
+					"images/navinfo.png",
+					"images/navlock.png",
+					"images/navvideo.png"
 				],
 				"refer": [
 					"tab-webview-subpage-setting.html",
 					"tab-webview-subpage-chat.html",
-					"tab-webview-subpage-contact.html",
-					"scanQR.html"
+					"tab-webview-subpage-contact.html"
 				],
 				"priority": 0
 			},
@@ -277,7 +283,12 @@
 					"images/video2.jpg",
 					"images/video4.jpg",
 					"images/video1.jpg",
-					"images/video3.jpg"
+					"images/video3.jpg",
+					"images/b.jpeg",
+					"images/j.jpeg",
+					"images/x.jpeg",
+					"images/l.jpeg",
+					"images/n.jpeg"
 				],
 				"refer": [],
 				"priority": 0
@@ -288,7 +299,8 @@
 					"css/mui.min.css",
 					"images/school.jpg",
 					"images/b.jpg",
-					"fonts/mui.ttf"
+					"fonts/mui.ttf",
+					"images/b.jpeg"
 				],
 				"refer": [
 					"privateMessage.html"
@@ -301,7 +313,10 @@
 					"images/n.jpg",
 					"images/l.jpg",
 					"images/x.jpg",
-					"js/mui.min.js"
+					"js/mui.min.js",
+					"images/l.jpeg",
+					"images/x.jpeg",
+					"images/n.jpeg"
 				],
 				"refer": [],
 				"priority": 0
@@ -327,7 +342,8 @@
 					"js/jquery.js",
 					"images/qq.png",
 					"images/qihoo.png",
-					"images/video2.jpg"
+					"images/video2.jpg",
+					"images/n.jpeg"
 				],
 				"refer": [],
 				"priority": 0

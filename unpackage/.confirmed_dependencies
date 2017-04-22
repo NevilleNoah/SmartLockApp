@@ -1,76 +1,117 @@
 {
-  "tab-webview-subpage-about.html": {
-    "resources": [
-      "images/right.png",
-      "images/lock.png"
-    ]
-  },
-  "tab-webview-subpage-chat.html": {
-    "resources": [
-      "images/video2.jpg",
-      "images/b.jpg",
-      "images/video4.jpg",
-      "images/j.jpg",
-      "images/video1.jpg",
-      "images/x.jpg",
-      "images/video3.jpg"
-    ]
-  },
-  "login.html": {
-    "resources": [
-      "js/app.js",
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "js/mui.enterfocus.js",
-      "images/user-photo.png"
-    ],
-    "refer": [
-      "tab-webview-main.html"
-    ]
-  },
-  "tab-webview-main.html": {
-    "resources": [
-      "tab-webview-subpage-about.html",
-      "images/scanQR.png",
-      "fonts/mui.ttf"
-    ],
-    "refer": [
-      "tab-webview-subpage-about.html",
-      "tab-webview-subpage-setting.html",
-      "tab-webview-subpage-chat.html",
-      "tab-webview-subpage-contact.html",
-      "scanQR.html"
-    ]
-  },
-  "tab-webview-subpage-contact.html": {
-    "resources": [
-      "images/n.jpg",
-      "images/l.jpg"
-    ]
-  },
-  "scanQR.html": {
-    "resources": [
-      "images/back.png",
-      "images/lightOff.png",
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "images/lightOn.png",
-      "js/jquery.js"
-    ]
-  },
-  "tab-webview-subpage-setting.html": {
-    "refer": [
-      "privateMessage.html"
-    ]
-  },
-  "privateMessage.html": {
-    "resources": [
-      "images/back.png",
-      "images/video2.jpg",
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "images/video1.jpg",
-      "js/jquery.js"
-    ]
-  }
+	"tab-webview-subpage-about.html": {
+		"resources": [
+			"images/right.png",
+			"images/lock.png",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"images/scanQR.png"
+		],
+		"refer": [
+			"Help.html",
+			"scanQR.html"
+		]
+	},
+	"tab-webview-subpage-chat.html": {
+		"resources": [
+			"images/video2.jpg",
+			"images/b.jpg",
+			"images/video4.jpg",
+			"images/j.jpg",
+			"images/video1.jpg",
+			"images/x.jpg",
+			"images/video3.jpg",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"images/b.jpeg",
+			"images/j.jpeg",
+			"images/x.jpeg",
+			"images/l.jpeg",
+			"images/n.jpeg"
+		]
+	},
+	"login.html": {
+		"resources": [
+			"js/app.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/mui.enterfocus.js",
+			"images/user-photo.png"
+		],
+		"refer": [
+			"tab-webview-main.html"
+		]
+	},
+	"tab-webview-main.html": {
+		"resources": [
+			"tab-webview-subpage-about.html",
+			"images/scanQR.png",
+			"fonts/mui.ttf",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/jquery.js",
+			"scanQR.html",
+			"images/navset.png",
+			"images/navinfo.png",
+			"images/navlock.png",
+			"images/navvideo.png"
+		],
+		"refer": [
+			"tab-webview-subpage-about.html",
+			"tab-webview-subpage-setting.html",
+			"tab-webview-subpage-chat.html",
+			"tab-webview-subpage-contact.html",
+			"scanQR.html"
+		]
+	},
+	"tab-webview-subpage-contact.html": {
+		"resources": [
+			"images/n.jpg",
+			"images/l.jpg",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"images/x.jpg",
+			"images/l.jpeg",
+			"images/x.jpeg",
+			"images/n.jpeg"
+		]
+	},
+	"scanQR.html": {
+		"resources": [
+			"images/back.png",
+			"images/lightOff.png",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"images/lightOn.png",
+			"js/jquery.js"
+		]
+	},
+	"tab-webview-subpage-setting.html": {
+		"refer": [
+			"privateMessage.html"
+		],
+		"resources": [
+			"images/b.jpg",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"images/b.jpeg"
+		]
+	},
+	"privateMessage.html": {
+		"resources": [
+			"images/back.png",
+			"images/video2.jpg",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"images/video1.jpg",
+			"js/jquery.js",
+			"images/n.jpeg"
+		]
+	},
+	"Help.html": {
+		"resources": [
+			"images/call.png"
+		]
+	}
 }

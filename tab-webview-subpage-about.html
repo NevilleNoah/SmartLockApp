@@ -12,12 +12,19 @@
 		<style>
 			html,
 			body {
-				background-color: #efeff4;
+				
+			}
+			#scanQR{
+				width: 8%;
+				position: absolute;
+				top:18%;
+				left: 90%;
 			}
 		</style>
 	</head>
 
 	<body>
+		<div><img id="scanQR" src="images/scanQR.png"></div>
 		<div class="mui-content">
 			<div id="" style="margin-top: 20%;width: 100%;height: auto;font-family: '微软雅黑';font-size: 30px;color: #8F8F94;">
 				<center>五号楼302</center>
@@ -56,6 +63,24 @@
 			mui.openWindow({
 				url: "Help.html",
 				id: "Help.html",
+				style: {
+					width: "100%",
+					height: "100%"
+				},
+				show: {
+					aniShow: "zoom-fade-out",
+					event: "loaded",
+					acceleration: "auto"
+				}
+			});
+		});
+		//跳转到扫码页面
+			var scanQR = document.getElementById("scanQR");
+		
+		scanQR.addEventListener("tap", function() {
+			mui.openWindow({
+				url: "scanQR.html",
+				id: "scanQR.html",
 				style: {
 					width: "100%",
 					height: "100%"
