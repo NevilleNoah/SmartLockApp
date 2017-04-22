@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+	<style>
+		body,html{
+			width: 100%;
+			height: 100%;
+		}
+		#backImg{
+			width: 100%;
+			height: 33%;
+			background-image: url(images/video1.jpg);
+			background-size: 100% 100%;		
+			position: relative;
+		}
+		#nav{
+			width: 100%;
+			height: 25%;
+			position: relative;
+		}
+		#nav>div{
+			float:left;
+		}
+		#back_div>img{
+			width: 10%;
+			position:absolute;
+			top: 12%;
+			left: 3%;
+		}
+		#edit{
+			font-family: "微软雅黑";
+			font-size: 16px;
+			color: white;
+			position: absolute;
+			top: 26%;
+			left: 87%;
+		}
+		#avatar{
+			width: 35%;
+			height: 20%;
+			background-image: url(images/video2.jpg);
+			background-size: 100% 100%;
+			border-radius: 50%;
+			float: left;
+			position: relative;
+			top: -10%;
+			left: 33%;
+			border:3px solid white;
+		}
+		#name_div{
+			width: 100%;
+			height: 5%;
+			top: 10%;
+			text-align: center;
+			position: relative;
+			position: absolute;
+			top: 45%;
+		}
+		#name{
+			font-family: "微软雅黑";
+			font-size: 30px;
+		}
+		.mui-table-view{
+			width: 100%;
+			float: left;
+		}
+		
+	</style>
+	<body>
+		<div id="backImg">
+			<div id="nav">
+				<div id="back_div" class="mui-action-back"><img id="back" src="images/back.png"></div>
+				<div id="edit">编辑</div>
+			</div>
+		</div>
+		<div id="avatar"></div>
+		<div id="name_div"><div id="name">倪颖鹤</div></div>
+		
+		<div class="mui-content">
+			
+				<!--页脚，放置补充信息或支持的操作-->
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">学校
+						<span class="mui-badge mui-badge-success">杭州电子科技大学</span>
+					</li>
+					<li class="mui-table-view-cell">学院
+						<span class="mui-badge mui-badge-success">信息工程学院</span>
+					</li>
+					<li class="mui-table-view-cell">学号
+						<span class="mui-badge mui-badge-success">16905121</span>
+					</li>
+					<li class="mui-table-view-cell">性别
+						<span class="mui-badge mui-badge-success">男</span>
+					</li>
+					<li class="mui-table-view-cell">专业
+						<span class="mui-badge mui-badge-success">计算机系</span>
+					</li>
+					<li class="mui-table-view-cell">电话
+						<span class="mui-badge mui-badge-success">13216172351</span>
+					</li>
+				</ul>
+			
+		</div>
+		
+		
+	</body>
+	<script src="js/jquery.js"></script>
+	<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+</html>
