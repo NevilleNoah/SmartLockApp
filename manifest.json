@@ -208,7 +208,8 @@
 					"css/mui.min.css",
 					"js/mui.enterfocus.js",
 					"fonts/mui.ttf",
-					"images/user-photo.png"
+					"images/user-photo.png",
+					"images/b.jpeg"
 				],
 				"refer": [
 					"main.html",
@@ -244,7 +245,9 @@
 					"images/video.png",
 					"images/unlocked.jpg",
 					"images/right.png",
-					"images/scanQR.png"
+					"images/scanQR.png",
+					"images/943761-200.png",
+					"images/503242-200.png"
 				],
 				"refer": [
 					"scanQR.html",

@@ -5,7 +5,9 @@
 			"images/lock.png",
 			"js/mui.min.js",
 			"css/mui.min.css",
-			"images/scanQR.png"
+			"images/scanQR.png",
+			"images/943761-200.png",
+			"images/503242-200.png"
 		],
 		"refer": [
 			"Help.html",
@@ -36,7 +38,8 @@
 			"js/mui.min.js",
 			"css/mui.min.css",
 			"js/mui.enterfocus.js",
-			"images/user-photo.png"
+			"images/user-photo.png",
+			"images/b.jpeg"
 		],
 		"refer": [
 			"tab-webview-main.html"
