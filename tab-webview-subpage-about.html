@@ -24,77 +24,87 @@
 				top:18%;
 				left: 90%;
 			}*/
-			#house_no{
-				padding-top: 10%;padding-bottom: 10%;
-				width: 100%;height: 5%;font-family: '微软雅黑';font-size: 1.2em;color: #000000;
+			
+			#house_no {
+				padding-top: 10%;
+				padding-bottom: 10%;
+				width: 100%;
+				height: 5%;
+				font-family: '微软雅黑';
+				font-size: 1.2em;
+				color: #000000;
 			}
-			#house_no img{
+			
+			#house_no img {
 				width: 5%;
 			}
-			#status{
+			
+			#status {
 				height: 40%;
 				width: 100%;
-				
 				/*background-color: red;*/
 			}
-			#help{
+			
+			#help {
 				float: left;
 				overflow: hidden;
 				/*background-color: blue;*/
-				width: 30%;
+				width: 33%;
 				height: 45%;
 			}
-			#open{
+			
+			
+			#scanQR {
 				float: left;
 				overflow: hidden;
-				/*background-color: yellow;*/
-				width: 40%;
-				height: 25%;
-			}
-			#scanQR{
-				float: left;
-				overflow: hidden;
-				height: 18%;
-				width: 40%;
+				height: 45%;
+				width: 33%;
 				/*background-color: green;*/
 				float: left;
 			}
-			#open{
+			
+			#open {
 				float: left;
 				overflow: hidden;
 				/*background-color: yellow;*/
 				width: 40%;
 				height: 27%;
+				
 			}
-			#video{
+			
+			#video {
 				float: right;
 				overflow: hidden;
 				/*background-color: #8A6DE9;*/
 				height: 45%;
-				width: 30%;
+				width: 33%;
 			}
-			#status img{
-				
+			
+			#status img {
 				height: 100%;
 			}
-			#help img{
-				
-				width: 100%;
+			
+			#help img {
+				width: 60%;
 				margin-top: 40%;
 			}
-			#video img{
-				
-				width: 100%;
+			
+			#video img {
+				width: 60%;
 				margin-top: 40%;
 			}
-			#open img{
-				
-				width: 80%;
+			
+			/*#open img {
+				width: 60%;
+			}*/
+			
+			#scanQR img {
+				width: 60%;
+				margin-top: 40%;
 			}
-			#scanQR img{
-				
-				height: 70%;
-				
+			
+			.mybtn{
+				font-size: 0.8em;
 			}
 		</style>
 	</head>
@@ -102,32 +112,30 @@
 	<body>
 		<!--<div><img id="scanQR" src="images/scanQR.png"></div>-->
 		<!--<div class="mui-content">-->
-			<div id="house_no">
-				<img src="images/943761-200.png" />五号楼302
-			</div>
-			<div id="status">
-				<img src="images/503242-200.png">
-			</div>
-			<div id="help">
-				<img src="images/503242-200.png"><br />
-					<span>一键呼救</span>
-			</div>
-			<div id="open">
-				<img src="images/503242-200.png"><br />
-					<span>一键开锁</span>
-			</div>
-			<div id="video">
-				<img src="images/503242-200.png"><br />
-				<span>查看监控</span>
-			</div>	
-			<div id="scanQR">
-				<img src="images/scanQR.png"><br />
-					<span>扫码开锁</span>
-			</div>
-					
-			
-			
-			<!--<div id="" style="margin: 0 auto;">
+		<div id="house_no">
+			<img src="images/943761-200.png" />五号楼302
+		</div>
+		<div id="status" class="mybtn">
+			<img src="images/open.png">
+		</div>
+		<div id="help" class="mybtn">
+			<img src="images/help.png"><br />
+			<center><span>一键呼救</span></center>
+		</div>
+		<!--<div id="open" class="mybtn">
+			<img src="images/open.png"><br />
+			<center><span>一键开锁</span></center>
+		</div>-->
+		<div id="video" class="mybtn">
+			<img src="images/eye_close.png"><br />
+			<center><span>查看监控</span></center>
+		</div>
+		<div id="scanQR" class="mybtn">
+			<img src="images/scanQR.png"><br />
+			<center><span>扫码开锁</span></center>
+		</div>
+
+		<!--<div id="" style="margin: 0 auto;">
 				<center><img src="images/right.png" style="width: 60%;height: 60%;margin-top: 3%;" /></center>
 			</div>
 			<center>
@@ -150,14 +158,16 @@
 		<!--</div>-->
 	</body>
 	<script src="js/mui.min.js"></script>
+	<script src="js/jquery.js"></script>
 	<script>
 		mui.init();
-		/*mui.plusReady(function() {
+
+		mui.plusReady(function() {
 			mui.toast('首页进入成功')
 		})
-		var Help = document.getElementById("Help");
+		var help = document.getElementById("help");
 		
-		Help.addEventListener("tap", function() {
+		help.addEventListener("tap", function() {
 			mui.openWindow({
 				url: "Help.html",
 				id: "Help.html",
@@ -171,10 +181,20 @@
 					acceleration: "auto"
 				}
 			});
-		});*/
+		});
 		//跳转到扫码页面
-			var scanQR = document.getElementById("scanQR");
-		
+		var isEyeOpen = false;
+		$('#video').click(function() {
+			if(isEyeOpen == true) {
+				$("#video img").attr('src', 'images/eye_close.png');
+				isEyeOpen = false;
+			} else {
+				$("#video img").attr('src', 'images/eye_open.png');
+				isEyeOpen = true;
+			}
+		});
+
+		var scanQR = document.getElementById("scanQR");
 		scanQR.addEventListener("tap", function() {
 			mui.openWindow({
 				url: "scanQR.html",

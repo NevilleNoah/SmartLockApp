@@ -7,7 +7,12 @@
 			"css/mui.min.css",
 			"images/scanQR.png",
 			"images/943761-200.png",
-			"images/503242-200.png"
+			"images/503242-200.png",
+			"images/eye_close.png",
+			"js/jquery.js",
+			"images/eye_open.png",
+			"images/help.png",
+			"images/open.png"
 		],
 		"refer": [
 			"Help.html",
