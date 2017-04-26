@@ -14,8 +14,8 @@
 				margin: 0px;
 				padding: 0px;
 				resize="document.activeElement.scrollIntoView(true);
+
 			}
-			
 			/*.mui-content {
 				height: 100%;
 			}
@@ -23,11 +23,9 @@
 			.area {
 				margin: 20px auto 0px auto;
 			}*/
-			
 			/*.mui-input-group {
 				margin-top: 10px;
 			}*/
-			
 			/*.mui-input-group:first-child {
 				margin-top: 20px;
 			}*/
@@ -54,9 +52,6 @@
 			.mui-btn {
 				padding: 10px;
 			}*/
-			
-			
-			
 			/*.spliter {
 				color: #bbb;
 				padding: 0px 8px;
@@ -71,7 +66,6 @@
 				padding: 0px;
 				margin: 0px;
 			}*/
-			
 			/*.oauth-area .oauth-btn {
 				display: inline-block;
 				width: 50px;
@@ -104,33 +98,36 @@
             
             content: '开';
         }*/
-       .link-area {
+			
+			.link-area {
 				display: block;
 				font-size: 0.85em;
 				text-align: center;
 				margin-top: 3%;
 			}
-        #login{
-        	background-color: #5CACEE;
-        	border-color: #5CACEE;
-        	font-family: "微软雅黑";
-        	height: 50px;
-        	width: 100%;
-        }
-        
-        #icon{
-        	padding-top: 15%;
-        	margin-left: 35%;
-        	height:45%;
-        	width: 30%;
-        	margin-bottom: 10%;
-        }
-        #icon img{
-        	height: 70%;
-        	width: 70%;
-        	border-radius: 10%;
-        	border-radius: 50%;
-        }
+			
+			#login {
+				background-color: #5CACEE;
+				border-color: #5CACEE;
+				font-family: "微软雅黑";
+				height: 50px;
+				width: 100%;
+			}
+			
+			#icon {
+				padding-top: 15%;
+				margin-left: 35%;
+				height: 45%;
+				width: 30%;
+				margin-bottom: 10%;
+			}
+			
+			#icon img {
+				height: 70%;
+				width: 70%;
+				border-radius: 10%;
+				border-radius: 50%;
+			}
 		</style>
 
 	</head>
@@ -140,24 +137,24 @@
 		<div class="mui-content">
 			<div id="icon">
 				<center>
-					<img src="images/b.jpeg"/>
+					<img src="images/b.jpeg" />
 					<!--<h1 style="font-family: '宋体'; size: 10px;margin-bottom: 20px;">校园智能云锁</h1>-->
 				</center>
 			</div>
 			<div>
 				<div id="login-form-div">
-			<form id='login-form' class="mui-input-group">
-				<div class="mui-input-row" id="usr">
-					<!--<label>账号</label>-->
-					<input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入账号">
+					<form id='login-form' class="mui-input-group">
+						<div class="mui-input-row" id="usr">
+							<!--<label>账号</label>-->
+							<input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入账号">
+						</div>
+						<div class="mui-input-row">
+							<!--<label>密码</label>-->
+							<input id='password' type="password" class="mui-input-clear mui-input" placeholder="请输入密码">
+						</div>
+					</form>
 				</div>
-				<div class="mui-input-row">
-					<!--<label>密码</label>-->
-					<input id='password' type="password" class="mui-input-clear mui-input" placeholder="请输入密码">
-				</div>
-			</form>
-			</div>
-			<!--<form class="mui-input-group">
+				<!--<form class="mui-input-group">
 				<ul class="mui-table-view mui-table-view-chevron">
 					<li class="mui-table-view-cell">
 						自动登录
@@ -167,47 +164,51 @@
 					</li>
 				</ul>
 			</form>-->
-			<div class="mui-content-padded" id="mlogin">
-				<button id='login' class="mui-btn mui-btn-primary">登录</button>
-				<div class="link-area">
-					<a id=''>校方管理</a> <span class="spliter">|</span>
-					<a id=''>忘记密码</a> <span class="spliter">|</span>
-					<a id=''>手势登录</a>
+				<div class="mui-content-padded" id="mlogin">
+					<button id='login' class="mui-btn mui-btn-primary">登录</button>
+					<div class="link-area">
+						<a id=''>校方管理</a> <span class="spliter">|</span>
+						<a id=''>忘记密码</a> <span class="spliter">|</span>
+						<a id=''>手势登录</a>
+					</div>
 				</div>
-			</div>
-			<!--<div class="mui-content-padded oauth-area">
+				<!--<div class="mui-content-padded oauth-area">
 
 			</div>-->
-			
-		</div>
-		<script src="js/mui.min.js"></script>
-		<script src="js/mui.enterfocus.js"></script>
-		<script src="js/app.js"></script>
-		
-		<script>
-			mui.init();
-			//登录判断
-			//c开头为电脑中的值，m开头为用户的值
-			var c_account=123;
-			var c_password=123;
-			mui.plusReady(function() {
+
+			</div>
+			<script src="js/mui.min.js"></script>
+			<script src="js/mui.enterfocus.js"></script>
+			<script src="js/app.js"></script>
+
+			<script>
+				mui.init();
+				//登录判断
+				//c开头为电脑中的值，m开头为用户的值
+				var c_account = 123;
+				var c_password = 123;
+				mui.plusReady(function() {
 					mui('#mlogin').on('tap', 'button', function() {
-						var m_account=mui("#account")[0].value;
-						var m_password=mui("#password")[0].value;
-						if(m_account==c_account&&m_password==c_password&&m_account!=null&&m_password!=null){
-						mui.toast('登录成功，正在跳转到主页面');
-						mui.openWindow({
-							id: 'tab-webview-main.html',
-							url: 'tab-webview-main.html'
-						});
-						}else{
-							mui.toast("登录失败，账号或密码错误")
+						var m_account = mui("#account")[0].value;
+						var m_password = mui("#password")[0].value;
+						if(m_account.length==0|| m_password.length==0) {
+							mui.toast("请输入账号密码")
+						}
+						else if(m_account != null && m_password != null) {
+							if(m_account == c_account && m_password == c_password) {
+								mui.toast('登录成功，正在跳转到主页面');
+								mui.openWindow({
+									id: 'tab-webview-main.html',
+									url: 'tab-webview-main.html'
+								});
+							} else {
+								mui.toast("登录失败，账号或密码错误")
+							}
 						}
 					});
-					
-			});
-			
-		</script>
+
+				});
+			</script>
 	</body>
 
 </html>
