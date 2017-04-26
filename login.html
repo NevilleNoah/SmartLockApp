@@ -112,9 +112,9 @@
         	border-color: #5CACEE;
         }
         #icon{
-        	margin-top: 35%;
+        	padding-top: 35%;
         	margin-left: 35%;
-        	height:25%;
+        	height:45%;
         	width: 30%;
         	
         }
@@ -137,6 +137,7 @@
 					<!--<h1 style="font-family: '宋体'; size: 10px;margin-bottom: 20px;">校园智能云锁</h1>-->
 				</center>
 			</div>
+			<div>
 			<form id='login-form' class="mui-input-group">
 				<div class="mui-input-row" id="usr">
 					<!--<label>账号</label>-->
@@ -165,25 +166,37 @@
 					<a id=''>手势登录</a>
 				</div>
 			</div>
-			<div class="mui-content-padded oauth-area">
+			<!--<div class="mui-content-padded oauth-area">
 
-			</div>
+			</div>-->
+			
 		</div>
 		<script src="js/mui.min.js"></script>
 		<script src="js/mui.enterfocus.js"></script>
 		<script src="js/app.js"></script>
+		
 		<script>
 			mui.init();
+			//登录判断
+			//c开头为电脑中的值，m开头为用户的值
+			var c_account=123;
+			var c_password=123;
 			mui.plusReady(function() {
 					mui('#mlogin').on('tap', 'button', function() {
-
-						mui.toast('登录成功，正在跳转到主页面')
+						var m_account=mui("#account")[0].value;
+						var m_password=mui("#password")[0].value;
+						if(m_account==c_account&&m_password==c_password&&m_account!=null&&m_password!=null){
+						mui.toast('登录成功，正在跳转到主页面');
 						mui.openWindow({
 							id: 'tab-webview-main.html',
 							url: 'tab-webview-main.html'
 						});
+						}else{
+							mui.toast("登录失败，账号或密码错误")
+						}
 					});
 			});
+			
 		</script>
 	</body>
 

@@ -209,7 +209,8 @@
 					"js/mui.enterfocus.js",
 					"fonts/mui.ttf",
 					"images/user-photo.png",
-					"images/b.jpeg"
+					"images/b.jpeg",
+					"js/jquery.js"
 				],
 				"refer": [
 					"main.html",
@@ -252,7 +253,9 @@
 					"js/jquery.js",
 					"images/eye_open.png",
 					"images/help.png",
-					"images/open.png"
+					"images/open.png",
+					"images/lock_open.png",
+					"images/lock_off.png"
 				],
 				"refer": [
 					"scanQR.html",

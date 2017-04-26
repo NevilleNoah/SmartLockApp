@@ -12,7 +12,9 @@
 			"js/jquery.js",
 			"images/eye_open.png",
 			"images/help.png",
-			"images/open.png"
+			"images/open.png",
+			"images/lock_open.png",
+			"images/lock_off.png"
 		],
 		"refer": [
 			"Help.html",
@@ -44,7 +46,9 @@
 			"css/mui.min.css",
 			"js/mui.enterfocus.js",
 			"images/user-photo.png",
-			"images/b.jpeg"
+			"images/b.jpeg",
+			"js/jquery.js",
+			"fonts/mui.ttf"
 		],
 		"refer": [
 			"tab-webview-main.html"
