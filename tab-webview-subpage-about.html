@@ -17,7 +17,7 @@
 				margin: 0px;
 				padding: 0px;
 				text-align: center;
-				background-color: #cde4f7;
+				
 			}
 			/*#scanQR{
 				width: 8%;
@@ -117,7 +117,7 @@
 			<img src="images/943761-200.png" />五号楼302
 		</div>
 		<div id="status" class="mybtn">
-			<img src="images/lock_open.png">
+			<img src="images/lock_open.png" id="status_img">
 				<center><span>一键开锁</span></center>
 		</div>
 		<div id="help" class="mybtn">
@@ -166,7 +166,7 @@
 
 		mui.plusReady(function() {
 			mui.toast('首页进入成功')
-		})
+		});
 		var help = document.getElementById("help");
 		
 		help.addEventListener("tap", function() {
@@ -183,6 +183,7 @@
 					acceleration: "auto"
 				}
 			});
+			
 		});
 		//监控状态切换
 		var isEyeOpen = false;
@@ -196,14 +197,14 @@
 			}
 		});
 		//锁状态切换
-		var isLockOpen = false;
-		$('#status').click(function() {
-			if(isEyeOpen == true) {
+		var isLockOpen = true;
+		$('#status_img').click(function() {
+			if(isLockOpen == true) {
 				$("#status img").attr('src', 'images/lock_off.png');
-				isEyeOpen = false;
+				isLockOpen = false;
 			} else {
 				$("#status img").attr('src', 'images/lock_open.png');
-				isEyeOpen = true;
+				isLockOpen = true;
 			}
 		});
 		
@@ -224,6 +225,14 @@
 				}
 			});
 		});
+		
+		/*(function(mui) {
+    	//重写返回键
+    		mui.back = function(event) {
+     			
+    		}
+		})(mui);*/
+		
 	</script>
 
 </html>

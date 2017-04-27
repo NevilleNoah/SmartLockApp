@@ -73,7 +73,8 @@
 			"tab-webview-subpage-setting.html",
 			"tab-webview-subpage-chat.html",
 			"tab-webview-subpage-contact.html",
-			"scanQR.html"
+			"scanQR.html",
+			"empty.html"
 		]
 	},
 	"tab-webview-subpage-contact.html": {
@@ -100,7 +101,9 @@
 	},
 	"tab-webview-subpage-setting.html": {
 		"refer": [
-			"privateMessage.html"
+			"privateMessage.html",
+			"login.html",
+			"user.html"
 		],
 		"resources": [
 			"images/b.jpg",
@@ -124,6 +127,11 @@
 	"Help.html": {
 		"resources": [
 			"images/call.png"
+		]
+	},
+	"user.html": {
+		"resources": [
+			"js/mui.min.js"
 		]
 	}
 }

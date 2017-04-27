@@ -280,7 +280,8 @@
 				"refer": [
 					"tab-webview-subpage-setting.html",
 					"tab-webview-subpage-chat.html",
-					"tab-webview-subpage-contact.html"
+					"tab-webview-subpage-contact.html",
+					"empty.html"
 				],
 				"priority": 0
 			},
@@ -314,7 +315,9 @@
 					"images/b.jpeg"
 				],
 				"refer": [
-					"privateMessage.html"
+					"privateMessage.html",
+					"login.html",
+					"user.html"
 				],
 				"priority": 0
 			},
@@ -368,6 +371,13 @@
 					"images/b.jpg",
 					"images/x.jpg",
 					"images/n.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"user.html": {
+				"resources": [
+					"js/mui.min.js"
 				],
 				"refer": [],
 				"priority": 0
