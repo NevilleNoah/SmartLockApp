@@ -1,137 +1,215 @@
 {
-	"tab-webview-subpage-about.html": {
-		"resources": [
-			"images/right.png",
-			"images/lock.png",
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"images/scanQR.png",
-			"images/943761-200.png",
-			"images/503242-200.png",
-			"images/eye_close.png",
-			"js/jquery.js",
-			"images/eye_open.png",
-			"images/help.png",
-			"images/open.png",
-			"images/lock_open.png",
-			"images/lock_off.png"
-		],
-		"refer": [
-			"Help.html",
-			"scanQR.html"
-		]
-	},
-	"tab-webview-subpage-chat.html": {
-		"resources": [
-			"images/video2.jpg",
-			"images/b.jpg",
-			"images/video4.jpg",
-			"images/j.jpg",
-			"images/video1.jpg",
-			"images/x.jpg",
-			"images/video3.jpg",
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"images/b.jpeg",
-			"images/j.jpeg",
-			"images/x.jpeg",
-			"images/l.jpeg",
-			"images/n.jpeg"
-		]
-	},
-	"login.html": {
-		"resources": [
-			"js/app.js",
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"js/mui.enterfocus.js",
-			"images/user-photo.png",
-			"images/b.jpeg",
-			"js/jquery.js",
-			"fonts/mui.ttf"
-		],
-		"refer": [
-			"tab-webview-main.html"
-		]
-	},
-	"tab-webview-main.html": {
-		"resources": [
-			"tab-webview-subpage-about.html",
-			"images/scanQR.png",
-			"fonts/mui.ttf",
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"js/jquery.js",
-			"scanQR.html",
-			"images/navset.png",
-			"images/navinfo.png",
-			"images/navlock.png",
-			"images/navvideo.png"
-		],
-		"refer": [
-			"tab-webview-subpage-about.html",
-			"tab-webview-subpage-setting.html",
-			"tab-webview-subpage-chat.html",
-			"tab-webview-subpage-contact.html",
-			"scanQR.html",
-			"empty.html"
-		]
-	},
-	"tab-webview-subpage-contact.html": {
-		"resources": [
-			"images/n.jpg",
-			"images/l.jpg",
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"images/x.jpg",
-			"images/l.jpeg",
-			"images/x.jpeg",
-			"images/n.jpeg"
-		]
-	},
-	"scanQR.html": {
-		"resources": [
-			"images/back.png",
-			"images/lightOff.png",
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"images/lightOn.png",
-			"js/jquery.js"
-		]
-	},
-	"tab-webview-subpage-setting.html": {
-		"refer": [
-			"privateMessage.html",
-			"login.html",
-			"user.html"
-		],
-		"resources": [
-			"images/b.jpg",
-			"js/mui.min.js",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"images/b.jpeg"
-		]
-	},
-	"privateMessage.html": {
-		"resources": [
-			"images/back.png",
-			"images/video2.jpg",
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"images/video1.jpg",
-			"js/jquery.js",
-			"images/n.jpeg"
-		]
-	},
-	"Help.html": {
-		"resources": [
-			"images/call.png"
-		]
-	},
-	"user.html": {
-		"resources": [
-			"js/mui.min.js"
-		]
-	}
+  "tab-webview-subpage-about.html": {
+    "resources": [
+      "images/right.png",
+      "images/lock.png",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "images/scanQR.png",
+      "images/943761-200.png",
+      "images/503242-200.png",
+      "images/eye_close.png",
+      "js/jquery.js",
+      "images/eye_open.png",
+      "images/help.png",
+      "images/open.png",
+      "images/lock_open.png",
+      "images/lock_off.png"
+    ],
+    "refer": [
+      "Help.html",
+      "scanQR.html"
+    ]
+  },
+  "tab-webview-subpage-chat.html": {
+    "resources": [
+      "images/video2.jpg",
+      "images/b.jpg",
+      "images/video4.jpg",
+      "images/j.jpg",
+      "images/video1.jpg",
+      "images/x.jpg",
+      "images/video3.jpg",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "images/b.jpeg",
+      "images/j.jpeg",
+      "images/x.jpeg",
+      "images/l.jpeg",
+      "images/n.jpeg"
+    ],
+    "refer": []
+  },
+  "login.html": {
+    "resources": [
+      "js/app.js",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/mui.enterfocus.js",
+      "images/user-photo.png",
+      "images/b.jpeg",
+      "js/jquery.js",
+      "fonts/mui.ttf"
+    ],
+    "refer": [
+      "tab-webview-main.html",
+      "forget_password.html",
+      "gesture.html"
+    ]
+  },
+  "tab-webview-main.html": {
+    "resources": [
+      "tab-webview-subpage-about.html",
+      "images/scanQR.png",
+      "fonts/mui.ttf",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/jquery.js",
+      "scanQR.html",
+      "images/navset.png",
+      "images/navinfo.png",
+      "images/navlock.png",
+      "images/navvideo.png"
+    ],
+    "refer": [
+      "tab-webview-subpage-about.html",
+      "tab-webview-subpage-setting.html",
+      "tab-webview-subpage-chat.html",
+      "tab-webview-subpage-contact.html",
+      "scanQR.html",
+      "empty.html"
+    ]
+  },
+  "tab-webview-subpage-contact.html": {
+    "resources": [
+      "images/n.jpg",
+      "images/l.jpg",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "images/x.jpg",
+      "images/l.jpeg",
+      "images/x.jpeg",
+      "images/n.jpeg"
+    ],
+    "refer": []
+  },
+  "scanQR.html": {
+    "resources": [
+      "images/back.png",
+      "images/lightOff.png",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "images/lightOn.png",
+      "js/jquery.js"
+    ],
+    "refer": []
+  },
+  "tab-webview-subpage-setting.html": {
+    "refer": [
+      "privateMessage.html",
+      "login.html",
+      "user.html"
+    ],
+    "resources": [
+      "images/b.jpg",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "images/b.jpeg"
+    ]
+  },
+  "privateMessage.html": {
+    "resources": [
+      "images/back.png",
+      "images/video2.jpg",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "images/video1.jpg",
+      "js/jquery.js",
+      "images/n.jpeg"
+    ],
+    "refer": []
+  },
+  "Help.html": {
+    "resources": [
+      "images/call.png"
+    ],
+    "refer": []
+  },
+  "user.html": {
+    "resources": [
+      "js/mui.min.js"
+    ],
+    "refer": []
+  },
+  "leadPage.html": {
+    "resources": [
+      "images/lead1.png",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "images/lead3.png",
+      "images/lead5.png",
+      "images/lead4.png",
+      "images/lead2.png"
+    ],
+    "refer": [
+      "login.html"
+    ]
+  },
+  "guide.html": {
+    "resources": [
+      "images/lead1.png",
+      "images/lead3.png",
+      "images/lead5.png",
+      "images/lead4.png",
+      "images/lead2.png",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "login.html"
+    ]
+  },
+  "enhance.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "guide.html"
+    ]
+  },
+  "index.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "guide.html",
+      "login.html"
+    ]
+  },
+  "forget_password.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "css/style.css",
+      "js/app.js",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "images/back.png"
+    ],
+    "refer": []
+  },
+  "gesture.html": {
+    "resources": [
+      "js/app.js",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/mui.locker.js",
+      "images/back.png"
+    ],
+    "refer": [
+      "main.html"
+    ]
+  }
 }

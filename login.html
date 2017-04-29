@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="ui-page-login" id="login.html">
+<html class="ui-page-login">
 
 	<head>
 		<meta charset="utf-8">
@@ -169,8 +169,8 @@
 					<button id='login' class="mui-btn mui-btn-primary">登录</button>
 					<div class="link-area">
 						<a id=''>校方管理</a> <span class="spliter">|</span>
-						<a id=''>忘记密码</a> <span class="spliter">|</span>
-						<a id=''>手势登录</a>
+						<a id='forget'>忘记密码</a> <span class="spliter">|</span>
+						<a id='gesture'>手势登录</a>
 					</div>
 				</div>
 				<!--<div class="mui-content-padded oauth-area">
@@ -239,7 +239,20 @@
 							return false;
 						};
 					})(mui);
-
+					//忘记密码跳转
+					document.getElementById("forget").addEventListener('tap',function(){
+						mui.openWindow({
+							url:"forget_password.html",
+							id:"forgte_password.html"
+						});
+					});
+					//手势登录跳转
+					document.getElementById("gesture").addEventListener('tap',function(){
+						mui.openWindow({
+							url:'gesture.html',
+							id:'gesture.html'
+						});
+					});
 				});
 			</script>
 	</body>

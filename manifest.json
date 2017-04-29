@@ -1,16 +1,16 @@
 {
 	"@platforms": ["android", "iPhone", "iPad"],
 	"id": "H5DC3CEB8",/*应用的标识，创建应用时自动生成，勿手动修改*/
-	"name": "demo5",/*应用名称，程序桌面图标名称*/
+	"name": "校园智能云锁",/*应用名称，程序桌面图标名称*/
 	"version": {
-		"name": "1.2.0",/*应用版本名称*/
+		"name": "1.4.0",/*应用版本名称*/
 		"code": "83"
 	},
 	"description": "",/*应用描述信息*/
 	"icons": {
 		"72": "icon.png"
 	},
-	"launch_path": "login.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"launch_path": "index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
 	"developer": {
 		"name": "",/*开发者名称*/
 		"email": "",/*开发者邮箱地址*/
@@ -106,7 +106,7 @@
 	"plus": {
 		"splashscreen": {
 			"autoclose": true,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
-			"waiting": true
+			"waiting": false,"delay":"0"
 		},
 		"runmode": "liberate",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
 		"signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
@@ -166,26 +166,26 @@
 				"ios": {
 					"iphone": {
 						"default": "", /*iPhone3启动图片选，分辨率：320x480*/
-						"retina35": "",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
-						"retina40": ""
+						"retina35": "images/lead1.png",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+						"retina40": "images/lead1.png","retina55":"images/lead1.png","retina47":"images/lead1.png","retina55l":"images/lead1.png"
 					},
 					"ipad": {
-						"portrait": "", /*iPad竖屏启动图片，分辨率：768x1004*/
-						"portrait-retina": "",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
-						"landscape": "", /*iPad横屏启动图片，分辨率：1024x748*/
-						"landscape-retina": "", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
-						"portrait7": "", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
-						"portrait-retina7": "",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
-						"landscape7": "", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
-						"landscape-retina7": ""
+						"portrait": "images/lead1.png", /*iPad竖屏启动图片，分辨率：768x1004*/
+						"portrait-retina": "images/lead1.png",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
+						"landscape": "images/lead1.png", /*iPad横屏启动图片，分辨率：1024x748*/
+						"landscape-retina": "images/lead1.png", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+						"portrait7": "images/lead1.png", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+						"portrait-retina7": "images/lead1.png",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+						"landscape7": "images/lead1.png", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+						"landscape-retina7": "images/lead1.png"
 					}
 				},
 				"android": {
 					"mdpi": "", /*普通屏启动图片，分辨率：240x282*/
 					"ldpi": "", /*大屏启动图片，分辨率：320x442*/
-					"hdpi": "", /*高分屏启动图片，分辨率：480x762*/
-					"xhdpi": "", /*720P高分屏启动图片，分辨率：720x1242*/
-					"xxhdpi": ""
+					"hdpi": "images/lead1.png", /*高分屏启动图片，分辨率：480x762*/
+					"xhdpi": "images/lead1.png", /*720P高分屏启动图片，分辨率：720x1242*/
+					"xxhdpi": "images/lead1.png"
 				}
 			}
 		}
@@ -198,7 +198,10 @@
 					"fonts/mui.ttf",
 					"css/mui.min.css"
 				],
-				"refer": [],
+				"refer": [
+					"guide.html",
+					"login.html"
+				],
 				"priority": 0
 			},
 			"login.html": {
@@ -215,7 +218,9 @@
 				"refer": [
 					"main.html",
 					"reg.html",
-					"tab-webview-main.html"
+					"tab-webview-main.html",
+					"forget_password.html",
+					"gesture.html"
 				],
 				"priority": 0
 			},
@@ -381,6 +386,71 @@
 				],
 				"refer": [],
 				"priority": 0
+			},
+			"leadPage.html": {
+				"resources": [
+					"images/lead1.png",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"images/lead3.png",
+					"images/lead5.png",
+					"images/lead4.png",
+					"images/lead2.png"
+				],
+				"refer": [
+					"login.html"
+				],
+				"priority": 0
+			},
+			"guide.html": {
+				"resources": [
+					"images/lead1.png",
+					"images/lead3.png",
+					"images/lead5.png",
+					"images/lead4.png",
+					"images/lead2.png",
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"login.html"
+				],
+				"priority": 0
+			},
+			"enhance.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"guide.html"
+				],
+				"priority": 0
+			},
+			"forget_password.html": {
+				"resources": [
+					"fonts/mui.ttf",
+					"css/style.css",
+					"js/app.js",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"images/back.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"gesture.html": {
+				"resources": [
+					"js/app.js",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"js/mui.locker.js",
+					"images/back.png"
+				],
+				"refer": [
+					"main.html"
+				],
+				"priority": 0
 			}
 		},
 		"idle": {
@@ -388,10 +458,8 @@
 				"images/weixin.png",
 				"css/mui.css",
 				"images/iconfont-tianjia.png",
-				"forget_password.html",
 				"unlock.html",
 				"js/mui.js",
-				"js/mui.locker.js",
 				"README.md"
 			]
 		}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	mui.plusReady(function(){
+      		document.getElementById("btn").addEventListener('tap',function(){
+      		mui.openWindow({
+				url: "login.html",
+				id: "login.html",
+				style: {
+					width: "100%",
+					height: "100%"
+				},
+				show: {
+					aniShow: "zoom-fade-out",
+					event: "loaded",
+					acceleration: "auto"
+				}
+			});
+      	});
+      	(function(mui) {
+						var backButtonPress = 0;
+						//重写返回键
+						mui.back = function(event) {
+							/* backButtonPress++;
+							 if (backButtonPress > 1) {
+							     //退出程序
+							     //plus.runtime.quit();*/
+							//返回桌面（后台）
+							var main = plus.android.runtimeMainActivity();
+							main.moveTaskToBack(false);
+							/* } else {
+							     plus.nativeUI.toast('再按一次返回桌面');
+							 }*/
+							setTimeout(function() {
+								backButtonPress = 0;
+							}, 2000);
+							return false;
+						};
+					})(mui);
+      	});
+      	
+		
+    </script>
+    <style>
+    	body,html{
+    		width: 100%;
+    		height: 100%;
+    		padding: 0px;
+    		margin: 0px;
+    	}
+    	img{
+    		height: 100%;
+    		width: 100%;
+    	}
+    	.mui-slider{
+    		width: 100%;
+    		height: 100%;
+    	}
+    	.mui-slider-group{
+    		width: 100%;
+    		height: 100%;
+    	}
+    	.mui-slider-item{
+    		width: 100%;
+    		height: 100%;
+    	}
+    	#btn{
+    		height: 7%;
+    		width: 50%;
+    		position: absolute;
+    		bottom: 10%;
+    		left: 25%;
+    		outline-color: white;
+    		color: white;
+    		border-color: white;
+    		font-size: 1.3em;
+    	}
+    	
+    </style>
+</head>
+<body>
+	<!--<div id="myCarousel" class="carousel slide">
+		<ol class="carousel-indicators">
+			 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+                <li data-target="#myCarousel" data-slide-to="5"></li>
+                 </ol>
+                 <div class="carousel-inner">
+                <div class="item active">
+                    <img src="images/first.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="images/cloud.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="images/help.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="images/care.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="images/safe.png" alt="">
+                </div>
+                </div>-->
+               	<div class="mui-slider">  
+  <div class="mui-slider-group">  
+   
+    <div class="mui-slider-item"><a href="#"><img src="images/lead2.png" /></a></div>  
+    <div class="mui-slider-item"><a href="#"><img src="images/lead3.png" /></a></div>  
+    <div class="mui-slider-item"><a href="#"><img src="images/lead4.png" /></a></div>
+    <div class="mui-slider-item"><a href="#"><img src="images/lead5.png" /></a><button type="button" id="btn" class="mui-btn mui-btn-outlined">开始体验</button></div>
+  </div>  
+</div>  
+</body>
+</html>
