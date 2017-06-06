@@ -213,13 +213,18 @@
 					"fonts/mui.ttf",
 					"images/user-photo.png",
 					"images/b.jpeg",
-					"js/jquery.js"
+					"js/jquery.js",
+					"images/lock.png",
+					"images/wave.png",
+					"login.html",
+					"Help.html",
+					"tab-webview-subpage-about2.html",
+					"forget_password.html"
 				],
 				"refer": [
 					"main.html",
 					"reg.html",
 					"tab-webview-main.html",
-					"forget_password.html",
 					"gesture.html"
 				],
 				"priority": 0
@@ -260,11 +265,19 @@
 					"images/help.png",
 					"images/open.png",
 					"images/lock_open.png",
-					"images/lock_off.png"
+					"images/lock_off.png",
+					"images/rest.png",
+					"images/view.png",
+					"images/camera.png",
+					"images/talk.png",
+					"js/radialIndicator.js",
+					"images/sos.png",
+					"images/myconsole.png",
+					"images/wave.png",
+					"Help.html"
 				],
 				"refer": [
-					"scanQR.html",
-					"Help.html"
+					"scanQR.html"
 				],
 				"priority": 0
 			},
@@ -375,7 +388,10 @@
 					"images/call.png",
 					"images/b.jpg",
 					"images/x.jpg",
-					"images/n.jpg"
+					"images/n.jpg",
+					"login.html",
+					"images/lock.png",
+					"images/wave2.png"
 				],
 				"refer": [],
 				"priority": 0
@@ -434,7 +450,8 @@
 					"js/app.js",
 					"js/mui.min.js",
 					"css/mui.min.css",
-					"images/back.png"
+					"images/back.png",
+					"login.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -450,6 +467,31 @@
 				"refer": [
 					"main.html"
 				],
+				"priority": 0
+			},
+			"main.html": {
+				"resources": [
+					"js/app.js",
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"tab-webview-subpage-about2.html": {
+				"resources": [
+					"login.html",
+					"css/mui.min.css",
+					"js/jquery.js",
+					"images/sos.png",
+					"images/view.png",
+					"images/camera.png",
+					"images/rest.png",
+					"images/talk.png",
+					"images/myconsole.png",
+					"js/mui.min.js"
+				],
+				"refer": [],
 				"priority": 0
 			}
 		},

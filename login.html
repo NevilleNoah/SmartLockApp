@@ -2,182 +2,161 @@
 <html class="ui-page-login">
 
 	<head>
+		
+			
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title></title>
 		<link href="css/mui.min.css" rel="stylesheet" />
 		<style>
-			.ui-page-login,
-			body {
-				width: 100%;
-				height: 100%;
-				margin: 0px;
-				padding: 0px;
-				resize="document.activeElement.scrollIntoView(true);
-
-			}
-			/*.mui-content {
-				height: 100%;
-			}
-			
-			.area {
-				margin: 20px auto 0px auto;
-			}*/
-			/*.mui-input-group {
-				margin-top: 10px;
-			}*/
-			/*.mui-input-group:first-child {
-				margin-top: 20px;
-			}*/
-			/*
-			.mui-input-group label {
-				width: 22%;
-			}
-			
-			.mui-input-row label~input,
-			.mui-input-row label~select,
-			.mui-input-row label~textarea {
-				width: 78%;
-			}
-			
-			.mui-checkbox input[type=checkbox],
-			.mui-radio input[type=radio] {
-				top: 6px;
-			}
-			
-			.mui-content-padded {
-				margin-top: 25px;
-			}
-			
-			.mui-btn {
-				padding: 10px;
-			}*/
-			/*.spliter {
-				color: #bbb;
-				padding: 0px 8px;
-			}
-			
-			.oauth-area {
-				position: absolute;
-				bottom: 20px;
-				left: 0px;
-				text-align: center;
-				width: 100%;
-				padding: 0px;
-				margin: 0px;
-			}*/
-			/*.oauth-area .oauth-btn {
-				display: inline-block;
-				width: 50px;
-				height: 50px;
-				background-size: 30px 30px;
-				background-position: center center;
-				background-repeat: no-repeat;
-				margin: 0px 20px;
-				-webkit-filter: grayscale(100%); 
-				border: solid 1px #ddd;
-				border-radius: 25px;
-			}
-			
-			.oauth-area .oauth-btn:active {
-				border: solid 1px #aaa;
-			}
-			
-			.oauth-area .oauth-btn.disabled {
-				background-color: #ddd;
-			}*/
-			/*.mui-switch.mui-active{
-				background-color: #5cacee;
-				border-color: #5cacee;
-			}
-			.mui-switch:before{
-            
-            content: '关';
-        }
-        .mui-switch.mui-active:before{
-            
-            content: '开';
-        }*/
-			
-			.link-area {
-				display: block;
-				font-size: 0.85em;
-				text-align: center;
-				margin-top: 3%;
-			}
-			
-			#login {
-				background-color: #5CACEE;
-				border-color: #5CACEE;
-				font-family: "微软雅黑";
-				height: 50px;
-				width: 100%;
-				font-size: 1em;
-			}
-			
 			#icon {
-				padding-top: 15%;
-				margin-left: 35%;
 				height: 45%;
-				width: 30%;
-				margin-bottom: 10%;
+				width: 100%;
+				background: #00ccff;
 			}
-			
 			#icon img {
-				height: 70%;
-				width: 70%;
+				height:50%;
+				width: 50%;
 				border-radius: 10%;
 				border-radius: 50%;
 			}
+			#mytitle{
+				margin-top: -5%;;
+				font-size: 1.7em;
+				font-family: "微软雅黑";
+				color: #fff;
+			}
+			#wave{
+				width: 100%;
+				height: 5%;
+			
+				}
+			#wave img{
+				width:100%;
+				height:5%;
+			}
+			#content{
+				margin: 0px;
+				padding: 0px;
+				margin-top: -5%;
+				background: #fff;
+				height: 325px;
+			}
+			.loginform{
+				width: 70%;
+				margin: 0 auto;
+				/*background: #fc2;*/
+				color: #64b2c5;
+				font-size: 0.9em;
+			}
+			.loginform div{
+				padding: 0.2em;
+				margin-bottom:1.1em;
+				border-bottom: 2px solid #d5dfe2;
+			}
+			#mylogindiv,#loginhelpform{
+				padding: 0em;
+				margin-bottom:0em;
+				border: 0px solid #fff;
+				width: 100%;
+				}
+			#loginhelpform div{
+				padding: 0em;
+				margin-bottom:0em;
+				border: 0px solid #fff;
+				width: 50%;
+				
+			}
+			#myloginbutton{
+				border: 0px solid #fff;
+				border-color: #00ccff;
+				background: #00ccff;
+				font-family: "微软雅黑";
+				height: 50px;
+				width: 100%;
+				font-size: 1.2em;
+				}
+				#help1{
+					width:49%;
+					margin-top: 0.2em;
+					text-decoration: underline;
+					float: left;
+					color: #64b2c5;
+				}
+				#help1 a{
+					color: #64b2c5;
+					
+				}
+				#help2{
+					float: left;
+					width:49%;
+					margin-top: 0.2em;
+					text-decoration: underline;
+					text-align: right;
+					
+				}
+				#help2 a{
+					color: #64b2c5;
+				
+				}
+				#username{
+					width: 75%;
+					margin: 0px;
+					padding: 0px;
+					border: 0px;
+				}
+				#password{
+					width: 75%;
+					margin: 0px;
+					padding: 0px;
+					border: 0px;
+				}
+				#myselect{
+					width: 50%;
+					margin: 0px;
+					padding: 0px;
+					border: 0px;
+				}
 		</style>
-
 	</head>
-
 	<body>
-
 		<div class="mui-content">
 			<div id="icon">
 				<center>
-					<img src="images/b.jpeg" />
-					<!--<h1 style="font-family: '宋体'; size: 10px;margin-bottom: 20px;">校园智能云锁</h1>-->
+					<img src="images/lock.png" />
+					<div id="mytitle">
+						校园智能云锁
+					</div>
 				</center>
 			</div>
-			<div>
-				<div id="login-form-div">
-					<form id='login-form' class="mui-input-group">
-						<div class="mui-input-row" id="usr">
-							<!--<label>账号</label>-->
-							<input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入账号">
+			<div id="wave">
+				<img src="images/wave.png"/>
+			</div>
+				<div id="content">
+					<div id="login-form-div">
+					<form class="loginform">
+						<div>账号：<input type="text" id="username"/></div>
+						<div>密码：<input type="password" id="password"/></div>
+						<div>所属大学：
+							<select id="myselect">
+							  <option value ="volvo">杭州电子科技大学</option>
+							  <option value ="saab">浙江工业大学</option>
+							  <option value="opel">浙江师范大学</option>
+							  <option value="audi">浙江大学</option>
+							</select>
 						</div>
-						<div class="mui-input-row">
-							<!--<label>密码</label>-->
-							<input id='password' type="password" class="mui-input-clear mui-input" placeholder="请输入密码">
+						<div id="mylogindiv">
+							<button id='myloginbutton' class="mui-btn mui-btn-primary" >登 录</button>
+						</div>
+						<div id="loginhelpform">
+							<div id="help1"><a href="forget_password.html">忘记密码</a></div>
+							<div id="help2"><a href="#">校方登录</a></div>
 						</div>
 					</form>
-				</div>
-				<!--<form class="mui-input-group">
-				<ul class="mui-table-view mui-table-view-chevron">
-					<li class="mui-table-view-cell">
-						自动登录
-						<div id="autoLogin" class="mui-switch">
-							<div class="mui-switch-handle"></div>
-						</div>
-					</li>
-				</ul>
-			</form>-->
-				<div class="mui-content-padded" id="mlogin">
-					<button id='login' class="mui-btn mui-btn-primary">登录</button>
-					<div class="link-area">
-						<a id=''>校方管理</a> <span class="spliter">|</span>
-						<a id='forget'>忘记密码</a> <span class="spliter">|</span>
-						<a id='gesture'>手势登录</a>
 					</div>
+				
 				</div>
-				<!--<div class="mui-content-padded oauth-area">
 
-			</div>-->
-
-			</div>
 			<script src="js/mui.min.js"></script>
 			<script src="js/mui.enterfocus.js"></script>
 			<script src="js/app.js"></script>
@@ -189,8 +168,8 @@
 				var c_account = "admin";
 				var c_password = "admin";
 				mui.plusReady(function() {
-					mui('#mlogin').on('tap', 'button', function() {
-						var m_account = mui("#account")[0].value;
+					mui('#mylogindiv').on('tap', 'button', function() {
+						var m_account = mui("#username")[0].value;
 						var m_password = mui("#password")[0].value;
 						if(m_account.length == 0 || m_password.length == 0) {
 							mui.toast("请输入账号密码")
@@ -239,20 +218,20 @@
 							return false;
 						};
 					})(mui);
-					//忘记密码跳转
-					document.getElementById("forget").addEventListener('tap',function(){
-						mui.openWindow({
-							url:"forget_password.html",
-							id:"forgte_password.html"
-						});
-					});
-					//手势登录跳转
-					document.getElementById("gesture").addEventListener('tap',function(){
-						mui.openWindow({
-							url:'gesture.html',
-							id:'gesture.html'
-						});
-					});
+//					//忘记密码跳转
+//					document.getElementById("forget").addEventListener('tap',function(){
+//						mui.openWindow({
+//							url:"forget_password.html",
+//							id:"forgte_password.html"
+//						});
+//					});
+//					//手势登录跳转
+//					document.getElementById("gesture").addEventListener('tap',function(){
+//						mui.openWindow({
+//							url:'gesture.html',
+//							id:'gesture.html'
+//						});
+//					});
 				});
 			</script>
 	</body>

@@ -7,13 +7,288 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<script src="js/mui.min.js"></script>
+
 		<link rel="stylesheet" href="css/mui.min.css">
-		<script>
-			window.location.href="http://www.gkirito.com:8080/f1/about.html";
-		</script>
+		<link href="css/radialindicator.css" rel="stylesheet" type="text/css">
+		<style>
+		html,
+			body {
+				width: 100%;
+				height: 100%;
+				margin: 0px;
+				padding: 0px;
+				text-align: center;
+				background: #fff;
+				position: relative;
+			}
+			a{
+				color: #000000;
+			}
+			
+			#lock {
+				height: 35%;
+				width: 100%;
+				background-color: #00ccff;
+				position: relative;
+			}
+			#lock img {
+				position: absolute;
+				border-radius:50%;
+				width: 110px;
+				height: 110px;
+				left: 10px;
+				top:10px;
+			}
+			#lock div{
+				color: #fff;
+				font-size: 1.1em;
+				font-family: "微软雅黑";
+			}
+			
+			#functionform {
+				width: 90%;
+				margin: 0 auto;
+			}
+			
+			#functionform img {
+				width: 70%;
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			#fc1 div,
+			#fc1_d div,
+			#fc2 div,
+			#fc2_d div {
+				margin-bottom: 0.8em;
+				text-align: center;
+				font-size: 0.8em;
+				width: 33%;
+				float: left;
+			}
+			
+			
+			
+			#wave img {
+				width: 100%;
+				height: 85px;
+			}
+			
+			
+			
+			#open {
+				float: left;
+				overflow: hidden;
+				/*background-color: yellow;*/
+				width: 40%;
+				height: 27%;
+			}
+			
+			/*#prgLogo {
+				position:absolute;
+    			width: 156px;
+    			height: 156px;
+    			left:9px;
+    			top: 9px;
+			}*/
+			
+			#indicatorContainerWrap,
+			#indicatorContainer {
+				display: inline-block;
+				position: relative;
+				
+			}
+			#indicatorContainer{
+				
+				margin-top: 5%;
+				margin-bottom: 2%;
+			}
+
+			
+		</style>
 	</head>
 
-	<body></body>
+	<body>
+
+		<div id="lock">
+
+			<div id="indicatorContainerWrap">
+				<div id="indicatorContainer">
+					<img src="images/lock.png" id="prgLogo"/>
+				</div>
+			</div>
+			<div>
+				5号楼 612寝室
+			</div>
+		</div>
+		<div id="wave">
+			<img src="images/wave.png" />
+		</div>
+		<div id="functionform">
+			<div id="fc1">
+				<div><img src="images/sos.png" alt="" id="help"/></div>
+				<div><img src="images/camera.png" alt="" id="scanQR"/></div>
+				<div><img src="images/view.png" alt="" id="view"/></div>
+			</div>
+			<div id="fc1_d">
+				<div >一键呼救</div>
+				<div >扫码开锁</div>
+				<div>远程查看</div>
+			</div>
+			<div id="fc2">
+				<div><img src="images/talk.png" alt="" /></div>
+				<div><img src="images/rest.png" alt="" /></div>
+				<div><img src="images/myconsole.png" id="grant"/></div>
+			</div>
+			<div id="fc2_d">
+				<div>智能提醒</div>
+				<div>智能休眠</div>
+				<div>灵活授权</div>
+
+			</div>
+		</div>
+	
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/radialIndicator.js"></script>
+	<script>
+		mui.init();
+//alert("进入页面")
+		mui.plusReady(function() {
+			mui.toast('首页进入成功')
+		});
+
+		var help = document.getElementById("help");
+
+		help.addEventListener("tap", function() {
+			mui.openWindow({
+				url: "Help.html",
+				id: "Help.html",
+				style: {
+					width: "100%",
+					height: "100%"
+				},
+				show: {
+					aniShow: "zoom-fade-out",
+					event: "loaded",
+					acceleration: "auto"
+				}
+			});
+
+		});
+		//监控状态切换
+		/*		var isEyeOpen = false;
+				$('#video').click(function() {
+					if(isEyeOpen == true) {
+						$("#video img").attr('src', 'images/eye_close.png');
+						
+		                isEyeOpen = false;
+					} else {
+						$("#video img").attr('src', 'images/eye_open.png');
+						
+						isEyeOpen = true;
+					}
+				});
+		*/ //锁状态切换
+		
+		
+
+		//跳转到扫码界面
+		var scanQR = document.getElementById("scanQR");
+		scanQR.addEventListener("tap", function() {
+			mui.openWindow({
+				url: "scanQR.html",
+				id: "scanQR.html",
+				style: {
+					width: "100%",
+					height: "100%"
+				},
+				show: {
+					aniShow: "zoom-fade-out",
+					event: "loaded",
+					acceleration: "auto"
+				}
+			});
+		});
+
+		/*(function(mui) {
+    	//重写返回键
+    		mui.back = function(event) {
+     			
+    		}
+		})(mui);*/
+		$('#indicatorContainer').radialIndicator({
+			radius: 60,
+			barColor: '#00B2EE',
+			barWidth: 7,
+			initValue: 0,
+			roundCorner: true,
+			percentage: true,
+			displayNumber: false
+		});
+		
+		/*var myvalue=$("#myvalue").val();*/
+		/*function my(){
+			$('#indicatorContainer').data('radialIndicator').animate(100);
+			setTimeout($('#indicatorContainer').data('radialIndicator').animate(100),1000)
+		}
+		setInterval("my()",3000);*/
+		
+//		$('#indicatorContainer').data('radialIndicator').animate(100);
+		
+		var isLockOpen = true;
+		$("#prgLogo").click(function(){
+			if(isLockOpen == true) {
+				$.ajax({
+					type: "post",
+					url: "http://www.gkirito.com:8080/f1/do.jsp",
+					cache: false,
+					data: {
+						s: "1"
+					},
+					dataType: "json"
+				});
+				isLockOpen = false;
+			} else {
+				$.ajax({
+					type: "post",
+					url: "http://www.gkirito.com:8080/f1/do.jsp",
+					cache: false,
+					data: {
+						s: "0"
+					},
+					dataType: "json"
+				});
+				isLockOpen = true;
+			}
+			setTimeout($('#indicatorContainer').data('radialIndicator').animate(100),1000)
+			setTimeout(function(){$('#indicatorContainer').data('radialIndicator').animate(0);
+			},1200);
+			
+		});
+			
+		
+		//跳转到灵活授权页面
+		var grant=document.getElementById("grant");
+      	grant.addEventListener("tap",function(){
+      		mui.openWindow({
+				url: "http://112.74.18.56:8080/mywebsite/console/user.html",
+				id: "http://112.74.18.56:8080/mywebsite/console/user.html",
+				style: {
+					width: "100%",
+					height: "100%"
+				},
+				show: {
+					aniShow: "zoom-fade-out",
+					event: "loaded",
+					acceleration: "auto"
+				}
+			});
+      	});
+      	
+      	
+		/*setInterval($('#indicatorContainer').data('radialIndicator').animate(100),1000);*/
+	</script>
 
 </html>
